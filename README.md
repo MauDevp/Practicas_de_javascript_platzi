@@ -37,3 +37,7 @@
 - truthyAndFalsy.js
 - valores.js
 - variables.js
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia [Nombre de la Licencia] - consulta el archivo [GNU LGPLv3](LICENSE) para más detalles.
