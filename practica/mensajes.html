@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mensajes</title>
+    <style>
+        html{
+            background: rgb(255,0,159);
+            background: radial-gradient(circle, rgba(255,0,159,1) 2%, rgba(211,37,175,1) 34%, rgba(154,86,197,1) 54%,rgba(84,145,223,1) 83%, rgba(0,215,255,1) 98%);
+        }
+        .pantalla {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+        }
+        p {
+            font-size: 46px;
+            font-weight: 700;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: cell;
+            text-shadow: 1px 1px 2px black;
+        }
+        .cajita {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            height: 180px;
+            width: 450px;
+            border-radius: 8px;
+            cursor: text;
+        }
+        .cajita:hover {
+            transform: scale(1.01);
+            box-shadow: -1px -1px 20px 1px white;
+        }
+        cajita:focus {
+            outline: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="pantalla">
+        <p id="texto">
+            Ingresa un mensaje
+        </p>
+        <input class="cajita" type="text" placeholder="Ingresa tu mensaje aquí  ">
+
+    </div>
+    <script>
+        var input = document.querySelector('.cajita');
+        var elemento = document.getElementById('texto');
+        elemento.addEventListener('click', function() {
+            input.focus();
+            input.placeholder='¡Aquí!. \n\n arriba no';
+        });
+        input.addEventListener('focus', function() {
+            input.style.outline = 'none';
+        });
+
+    </script>
+</body>
+</html>
